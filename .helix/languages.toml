@@ -1,0 +1,12 @@
+
+[[language]]
+name = "bash"
+file-types = ["sh", { glob = "bat/**" }, { glob = "regolith3/**" }, { glob = "ghostty/**" }]
+
+[[language]]
+name = "common-lisp"
+file-types = ["lisp", { glob = "kanata/**" }]
+
+[[language]]
+name = "ron"
+file-types = ["ron", { glob = "cosmic/**" }]
