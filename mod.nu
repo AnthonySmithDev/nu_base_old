@@ -11,3 +11,6 @@ source builtin.nu
 
 source autoload/mod.nu
 source alias.nu
+
+source alias/git.nu
+source alias/zellij.nu

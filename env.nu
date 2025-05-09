@@ -190,6 +190,7 @@ $env.LOCAL_PATH = ($env.HOME | path join .local)
 $env.LOCAL_BIN = ($env.LOCAL_PATH | path join bin)
 $env.LOCAL_SHARE = ($env.LOCAL_PATH | path join share)
 $env.LOCAL_SHARE_FONTS = ($env.LOCAL_SHARE | path join fonts)
+$env.LOCAL_SHARE_ICONS = ($env.LOCAL_SHARE | path join icons)
 $env.LOCAL_SHARE_APPLICATIONS = ($env.LOCAL_SHARE | path join applications)
 env-path $env.LOCAL_BIN
 

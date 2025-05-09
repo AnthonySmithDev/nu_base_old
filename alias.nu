@@ -194,8 +194,13 @@ alias rcs = rclone copy --transfers=1 --size-only --progress
 alias rcm = rclone copy --transfers=1 --size-only --progress --metadata
 alias rcopy = rclone copy --size-only --progress --metadata
 
-alias mpvc = mpv --audio-channels=stereo --sub-visibility=no --video-crop=250:0
-alias mpvz = mpv --audio-channels=stereo --sub-visibility=no --video-zoom=0.4
+def mpvc [video: path, --crop(-c): string = "200:0"] {
+  mpv --audio-channels=stereo --sub-visibility=no --video-crop=($crop) $video
+}
+
+def mpvz [video: path, --zoom(-z): float = 0.2] {
+  mpv --audio-channels=stereo --sub-visibility=no --video-zoom=($zoom) $video
+}
 
 alias fuzzy = fzf --reverse --style full --preview "bat --color=always --style=numbers --line-range=:500 {}"
 
