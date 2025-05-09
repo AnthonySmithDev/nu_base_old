@@ -614,3 +614,7 @@ def rain-watch [] {
     sleep 5sec
   }
 }
+
+def to-repo [] {
+  url parse | get path | path split | skip | first 2 | path join
+}
