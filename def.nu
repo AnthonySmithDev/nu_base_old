@@ -618,3 +618,10 @@ def rain-watch [] {
 def to-repo [] {
   url parse | get path | path split | skip | first 2 | path join
 }
+
+def to-gif [video: path] {
+  mkdir ./tmp
+  ffmpeg -i $video -vf fps=10 ./tmp/frame_%04d.png
+  convert -delay 10 -loop 0 ./tmp/frame_*.png output.gif
+  rm -rf ./tmp
+}

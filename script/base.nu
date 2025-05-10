@@ -16,6 +16,8 @@ def main [] {
   if (exists-external apt) {
     try {
       pkg apt update
+      pkg apt upgrade
+
       pkg apt nala
       pkg apt basic
       pkg apt docker

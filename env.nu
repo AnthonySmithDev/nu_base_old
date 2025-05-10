@@ -44,6 +44,8 @@ $env.NUSHELL_BIN = ($env.USR_LOCAL_LIB | path join nushell)
 env-path $env.NUSHELL_BIN
 
 $env.HELIX_PATH = ($env.USR_LOCAL_LIB | path join helix)
+env-path $env.HELIX_PATH
+
 $env.HELIX_RUNTIME = ($env.HELIX_PATH | path join runtime)
 $env.HELIX_DEFAULT_RUNTIME = ($env.HELIX_PATH | path join runtime)
 
